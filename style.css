@@ -18,7 +18,7 @@ body {
 .banner-wrap {
   background: rgb(209, 228, 234);
   position: relative;
-  width: 322px;
+  width: 310px;
   height: 236px;
   overflow: hidden;
   border: 1px solid whitesmoke;
@@ -40,7 +40,7 @@ body {
   left: 0;
   z-index: 1;
   background-repeat: repeat-x;
-  animation: city 20s linear infinite;
+  animation: city 8s linear;
 }
 
 @keyframes city {
@@ -59,7 +59,7 @@ body {
   left: 0;
   z-index: 1;
   background-repeat: repeat-x;
-  animation: highway 6s linear infinite;
+  animation: highway 8s linear;
 }
 
 @keyframes highway {
@@ -70,7 +70,7 @@ body {
 
 .plinth {
   height: 68px;
-  width: 322px;
+  width: 312px;
   background-image: url(img/plinth.png);
   display: block;
   position: absolute;
@@ -92,7 +92,7 @@ body {
 
 .cta__btn:hover {
   background-image: url(img/cta_2_W200.png);
-  transition: all 0.2s;
+  // transition: all 0.2s;
 }
 
 .arrow {
@@ -132,61 +132,50 @@ body {
   }
 }
 
-.car {
+
+/* CAR--1 styles go here */
+
+.car1 {
   width: 190px;
   position: absolute;
   bottom: 79px;
-  left: 120px;
+  left: -191px;
   z-index: 2;
-  animation: car 7s ease-in-out infinite;
-//   animation: acceleration 7s infinite cubic-bezier(0, 0, 1, 0);
-//   animation: acceleration 7s infinite cubic-bezier(-0.68, 2, 2.01, .29);
-// }
-
-.car img {
-  width: 100%;
+  animation: car 9s linear; 
 }
 
-@keyframes acceleration { 
-  0% { 
-    opacity: 1;
-    transform: translateX(-100%);
-  }
-  30% {
-    opacity: 1; 
-    transform: translateX(40%);
-  }
-  100% { 
-    opacity: 1; 
-    transform: translateX(110%);
-  }
+.car1 img {
+  width: 100%;
 }
 
 @keyframes car {
   0% {
     left: -60%;
   }
-  40% { 
+  15% { 
     left: 30%;
   }
-  45% { 
+  30% { 
     left: 29%;
   }
   50% { 
     left: 30%;
   }
-  60% { 
+  70% { 
     left: 29%; 
   }
-  70% { 
+  80% { 
     left: 30%;
+  }
+  90% { 
+    left: 130%;
   }
   100% {
     left: 130%;
   }
 }
 
-.car-shadow { 
+.car1__shadow { 
   background: none repeat scroll 0 0 rgba(0,0,0,0);
   box-shadow: -5px 6px 10px 2px #000;
   position: absolute; 
@@ -195,30 +184,99 @@ body {
   width: 130px;
 }
 
-.wheel {
+.car1__wheel {
   position: absolute;
   bottom: 31px;
   left: 35px;
   z-index: 2;
 }
 
-.wheel img {
+.car1__wheel img {
   width: 27px;
   height: 27px;
-  animation: wheel 1s linear infinite;
+  animation: rotate 1s linear infinite;
 }
 
-.front-wheel {
+.car1__wheel--front {
   position: absolute;
   left: -13px;
 }
-.back-wheel {
+.car1__wheel--back {
   position: absolute;
   left: 104px;
 }
 
-@keyframes wheel {
+@keyframes rotate {
   100% {
     transform: rotate(360deg);
   }
 }
+
+
+/* CAR--2 styles go here */
+
+.car2 { 
+  width: 190px;
+  position: absolute;
+  top: 56px; 
+  // right: -191px; 
+  right: 0; 
+  z-index: 2;
+  animation: car2 5.5s ease-in;
+  animation-delay: 8.5s;
+  opacity: 0;
+}
+
+.car2 img {
+  width: 100%;
+}
+
+/* attempt to add/remove animation classes */
+.car2-animate { 
+  animation: car2 5.5s ease-in;
+  animation-delay: 8.5s;
+}
+
+@keyframes car2 { 
+  0% { 
+    opacity: 1;
+    transform: translate(100%, -10%) scale(0.7);
+  }
+  30% { 
+    opacity: 1;
+    transform: translate(-26%, 5%) scale(1.2);
+  }
+  90% { 
+    opacity: 1;
+    transform: translate(-26%, 5%) scale(1.2);
+  }
+  100% { 
+    opacity: 1;
+    transform: translate(-220%, 50%) scale(2);
+  }
+}
+
+.car2__wheel {
+  position: absolute;
+  bottom: 40px;
+  z-index: 2;
+}
+
+.car2__wheel img {
+  width: 31px;
+  height: 31px;
+  // animation: rotate 1s linear infinite;
+}
+
+.car2__wheel--front {
+  position: absolute;
+  left: 93px;
+}
+.car2__wheel--back {
+  position: absolute;
+  left: 158px;
+}
+
+
+
+

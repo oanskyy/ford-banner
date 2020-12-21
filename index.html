@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="script.js"></script>
   <link rel="stylesheet" href="style.css">
   <title>Ford banner</title>
 </head>
-<body>
+<body > 
 
   <!-- BANNER starts here -->
-  <div class="banner-wrap">
+  <div class="banner-wrap" onload="initAnim()">
     <div class="sky"></div>
     <div class="city"></div>
     <div class="highway"></div>
@@ -26,14 +27,24 @@
     </div>
     
     
-    <!-- CAR goes here -->
-    <div class="car">
-      <img src="img/mpu_car1.png" alt="blue ford car" srcset="">
-      <div class="wheel">
-        <img src="img/wheel.png" alt="car wheel" class="front-wheel">
-        <img src="img/wheel.png" alt="car wheel" class="back-wheel">
+    <!-- CAR--1 with side view goes here -->
+    <div class="car1">
+      <img src="img/mpu_car1.png" alt="blue ford car side view">
+      <div class="car1__wheel">
+        <img src="img/wheel.png" alt="car wheel" class="car1__wheel--front">
+        <img src="img/wheel.png" alt="car wheel" class="car1__wheel--back">
       </div> 
-      <div class="car-shadow"></div>
+      <div class="car1__shadow"></div>
+    </div>
+
+    <!-- CAR--2 with front/diagonal view goes here -->
+    <div class="car2">
+      <img src="img/mpu_car2.png" alt="blue ford car frontal view">
+      <!-- <div class="car2__wheel">
+        <img src="img/wheel.png" alt="car wheel" class="car2__wheel--front">
+        <img src="img/wheel.png" alt="car wheel" class="car2__wheel--back">
+      </div> 
+      <div class="car2__shadow"></div> -->
     </div>
       
 
